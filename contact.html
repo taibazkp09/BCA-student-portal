@@ -1,0 +1,121 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+    
+</head>
+
+<body>
+  <!--Navigation bar -->
+  <nav>
+    <div class="bar">
+        <img id="logo" src="sblogo.jpeg">
+        <h2>Sharanbasva University</h2>
+    </div>
+    <div class="in">
+          <input  type="checkbox" id="sidebar-active">
+          <label for="sidebar-active"class="open"> <!--Menu icon-->
+          <i class="ri-menu-line"></i>
+          </label>
+
+          <label id="overlay" for="sidebar-active"></label>
+       <div class="links-container">
+          <label for="sidebar-active" class="close">
+           <i class="ri-xrp-line"></i><!--Menu close icon-->
+           </label>
+
+        
+         <a href="home.html">Home</a>
+         <a href="course.html">Courses</a>
+         <a href="about.html">About Us</a>
+         <a href="contact.html">Contact</a>
+      </div>
+  </div>
+</nav>
+   
+    
+     <div class="heading">
+        <h2>Welcome to Sharnbasva University</h2>
+        <br>
+        <h2>BCA CO-ED</h2>
+     </div>
+     
+     <p id="query"><b>Send your quries</b></p>
+     <div id="container">
+       
+        <div class="query-box">
+           
+        <div class="box1">
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="1536eb85-579a-4a14-8c88-d55cc302e7ec">
+
+                <div class="input"><p>Enter your gmail</p>
+                  <input class="box" id="t"  type="text" name="gmail"  placeholder="">
+                </div>
+
+          <div class="input">  <p>Phone number</p>
+                <input class="box" id="p" type="number" name="phone" placeholder="">
+          </div>
+
+           <div class="input">  <p> Enter your questions</p>
+                 <input class="box" id="q"type="text" name="questions" placeholder="">
+          </div>
+              <br>
+
+              <button   id="btn">Submit</button>
+            </form>
+        </div>
+    
+       
+            <iframe id="map"src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3808.729435915185!2d76.82172137493332!3d17.328598783548557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc8b8aa170f760f%3A0x872fcb04853d307!2sSharnbasva%20University!5e0!3m2!1sen!2sin!4v1722269495976!5m2!1sen!2si"
+              loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>  
+            </div>
+         
+          <div class="us">
+            <div id="email">
+             <p  class="head">
+              <i class="fa-solid fa-envelope"></i>
+               <br>
+                 <b>Email us at</b></p>
+                 <p>sbruni@gamil.com</p>
+               <p>bca@gmail.com</p>
+           </div>
+       
+           <div id="phone">
+            <p  class="head">
+              <i class="fa-solid fa-phone"></i>
+               <br>
+                <b>Call us at</b></p>
+                <p>xxx xxx xxx</p>
+                <p>xxx xxx xxx</p>
+           </div>
+       
+        <div id="location">
+          <P class="head">
+            <i class="fa-solid fa-location-crosshairs"></i>
+             <br>
+              <b>Meet us at</b></P>
+              <p>8RJF+3WP, Vidya Nagar, Kalaburagi, Karnataka 585105</p>
+        </div>
+       </div>
+     </div>
+     
+       <div class="footer">
+        <p>Made with <i id="heart"class="ri-poker-hearts-fill"></i> by Taibaz Khanam</p>
+     </div>
+        </body>
+</html>

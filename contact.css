@@ -1,0 +1,260 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+/*navbar section*/
+nav{
+    height: 40px;
+    background-color:#06389d;
+    display: flex;
+    gap:4vh;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+justify-content: space-between;
+   align-items: center;
+   flex-direction: row;
+   color: white;
+}
+a{
+    color: white;
+    height: 100%;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1.6vw;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+
+    
+}
+.bar{
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    align-items: center;
+    width: 40%;
+    
+    padding-left: 0px;
+    
+    
+}
+#logo{
+    height:40px;
+    width:40px;
+    border-radius: 50%;
+    padding-left: 0px;
+}
+.nav a:hover{
+    background-color: black;
+}
+
+.links-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    margin-right:0px;
+  
+}
+nav .home-link{
+    margin-right: auto;
+}
+#sidebar-active{
+    display: none;
+}
+.open, .close{
+    display: none;
+  
+}
+.heading
+{
+    text-align: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+#query
+{
+    font-size:2.5vh;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-top: 50px;
+}
+#container
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 10px;
+}
+.query-box
+{
+    margin-left: 0px;
+    display: flex;
+    width: 60%;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 2px solid black;
+    padding-top: 10px;
+}
+#map{
+    margin: 20px;
+    border: 2px solid white;
+}
+.input{
+    padding-left: 20px;
+    border-radius: 10px;
+    padding-top: 30px;
+    width: 50%;
+ }
+ .box
+ {
+     border-radius: 5px;
+     width: 80%;
+ }
+ 
+ #btn
+ {
+     background-color:#06389d;
+     color: white;
+     height: 30px;
+     width: 80px;
+     margin-left: 20px;
+     margin-bottom: 10px;
+ }
+ #q{
+     height: 70px;
+ }
+/*contact section*/
+.us{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: 2.5vh;
+    padding: 10px;
+}
+.box1{
+    width: 70%;
+    font-size: 2.4vh;  
+}
+
+.footer
+{
+    text-align: center;
+    
+   
+    color: black;
+    padding-top: 180px;
+}
+
+/*Responsive code for other devices*/
+@media (max-width:900px)
+{
+    nav{
+        height: 40px;
+    }
+    .bar{
+      width: 80%;
+       font-size: 10px;
+    }
+.links-container{
+    flex-direction: column;
+    align-items: flex-start;
+    
+    position: fixed;
+    top:0;
+    right: -100%;
+    z-index:10;
+    width: 300px;
+    height: 500px;
+    background-color:#06389d; 
+    box-shadow: -5px 0 5px rgba(0,0,0,0.25);
+    transition: 0.75s ease-out;
+
+}
+h2{
+    font-size: 15px;
+}
+    
+i{
+    color: white;
+}
+nav a{
+    box-sizing: border-box;
+    height: 40px;
+    width:100%;
+    padding:20px 30px;
+    justify-content: flex-start;
+    color: white;
+    font-size: 2.2vh;
+  
+}
+nav a:hover{
+    background-color: black;
+}
+
+.close{
+    display: block;
+    padding:  20px;
+  
+}
+.open{
+    display: block;
+    padding:  20px;
+}
+#sidebar-active:checked~ .links-container{
+ right: 0;
+}
+#sidebar-active:checked ~ overlay
+{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top:0;
+    left: 0;
+    z-index: 9;
+}
+   
+ #container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  
+}
+.query-box{
+    width: 100%;
+    border-color: rgb(15, 15, 15);
+    display: flex;
+    flex-direction: column;
+    border-color: white;
+   
+}
+.input{
+    padding-left: 20px;
+    border-radius: 10px;
+    padding-top: 20px;
+    width: 70%;
+ }
+ .box
+ {
+     border-radius: 5px;
+     width: 90%;
+ }
+ 
+.box1{
+    width: 100%;
+}
+.box2{
+    margin-top: 15px;
+}
+
+#map{
+   height: 400px;
+}
+.footer{
+    padding-top: 50px;
+}
+#heart{
+    color: black;
+}
+
+}

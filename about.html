@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="about.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+</head>
+<body>
+    <nav>
+        <div class="bar">
+            <img id="logo" src="sblogo.jpeg">
+            <h2>Sharanbasva University</h2>
+        </div>
+<div class="in">
+   <input  type="checkbox" id="sidebar-active">
+   <label for="sidebar-active"class="open">
+    <i class="ri-menu-line"></i>
+   </label>
+
+   <label id="overlay" for="sidebar-active"></label>
+   <div class="links-container">
+   <label for="sidebar-active" class="close">
+    <i class="ri-xrp-line"></i>
+
+   </label>
+   <a href="home.html">Home</a>
+   <a href="course.html">Courses</a>
+   <a href="about.html">About Us</a>
+   <a href="contact.html">Contact</a>
+   
+   </div>
+</div>
+    </nav>
+    <div class="content">
+        <div class="heading">
+           <h2>Welcome to Sharnbasva University</h2>
+           <h3>BCA CO-ED</h3>
+        </div>
+       </div>
+        
+    <section class="faculty-section">
+        <h2>Our Faculty</h2>
+        <div class="faculty-slider">
+          <div class="faculty-container">
+            <div class="faculty-card">
+              <img src="male_fac.jpeg" alt="Faculty 1">
+              <h3>Dr. Jane Doe</h3>
+              <h4>Head of Department, Computer Science</h4>
+              <h6>Dr. Jane Doe has over 20 years of teaching experience and has published numerous research papers in AI and Machine Learning.</h6>
+            </div>
+            <div class="faculty-card">
+              <img src="female_fac.jpg" alt="Faculty 2">
+              <h3>Prof. John Smith</h3>
+              <h4>Professor, Mathematics</h4>
+              <h6>Prof. John Smith specializes in Applied Mathematics and has won multiple teaching excellence awards.</h6>
+            </div>
+            <div class="faculty-card">
+              <img src="male_fac.jpeg" alt="Faculty 3">
+              <h3>Prof. Alice Green</h3>
+              <h4>Professor, Biology</h4>
+              <h6>Prof. Alice Green is an expert in molecular biology with significant contributions to cancer research.</h6>
+            </div>
+            <div class="faculty-card">
+                <img src="male_fac.jpeg" alt="Faculty 4">
+                <h3>Prof. Alice Green</h3>
+                <h4>Professor, Biology</h4>
+                <h6>Prof. Alice Green is an expert in molecular biology with significant contributions to cancer research.</h6>
+              </div>
+              <div class="faculty-card">
+                <img src="female_fac.jpg" alt="Faculty 5">
+                <h3>Prof. Alice Green</h3>
+                <h4>Professor, Biology</h4>
+                <h6>Prof. Alice Green is an expert in molecular biology with significant contributions to cancer research.</h6>
+              </div>
+          </div>
+          
+        </div>
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+       
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+      
+      </section>
+    
+    
+    <script>
+        const container = document.querySelector('.faculty-container');
+    let currentIndex = 0;
+    
+    function moveSlide(direction) {
+      const slides = document.querySelectorAll('.faculty-card');
+      const totalSlides = slides.length;
+      const slideWidth = slides[0].offsetWidth;
+    
+      currentIndex += direction;
+    
+      // Wrap around logic
+      if (currentIndex < 0) currentIndex = totalSlides - 1;
+      if (currentIndex >= totalSlides) currentIndex = 0;
+    
+      // Move the container
+      container.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+    }
+    
+    </script>
+    <section class="achievements-section">
+        <h2>Our Achievements</h2>
+        <ul class="achievements-list">
+            <li>Ranked among the top 10 institutions for higher education in 2023.</li>
+            <li>Over 500 research papers published by faculty in the last five years.</li>
+            <li>Awarded "Best Innovation in Education" at the National Awards 2022.</li>
+            <li>Consistently achieving 95% placement rates for graduates.</li>
+        </ul>
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 Our University. All rights reserved.</p>
+    </footer>
+</body>
+</html>

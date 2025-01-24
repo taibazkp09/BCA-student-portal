@@ -1,0 +1,95 @@
+
+body{
+    padding: 0px;
+    margin: 0px;
+}.navbar
+{
+    background-color: #06389d;
+    display: flex;
+    flex-direction: row;
+    font-weight: bold;
+    color:white;
+    font-size:larger;
+    font-family:'Times New Roman', Times, serif;
+    max-height : 40px ;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+#logo{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+h2{
+    margin-top: 10px;
+    font-size: 20px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+   
+}
+.container{
+  
+    display: flex;
+    margin-right: 30px;
+    margin-left: 65%;
+    flex-direction: column;
+    justify-content: center;
+    width: 30%;
+    margin-top: 2%;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.k{
+    display: flex;
+    flex-direction: row;
+  padding: 10px;
+    justify-content: space-evenly;
+    width: 90%;
+    
+  
+}
+i{
+  font-size:20px;
+  align-self: center;
+
+}
+
+
+#icon-link{
+    color: white;
+    text-decoration: none;
+    align-self: center;
+}
+
+
+
+@media(max-width:900px){
+   body{
+    background-image: none;
+   }
+   .container{
+  
+    display: flex;
+    margin-left: 10px;
+  
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+    margin-top: 8%;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+.k{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    justify-content: space-around;
+    font-size: 3.5vw;
+  
+  
+  
+}
+}

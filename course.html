@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources Page</title>
+    <link rel="stylesheet" href="course.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"rel="stylesheet"/>
+</head>
+
+<body>
+    <!--Navigation bar -->
+    <nav>
+        <div class="bar">
+            <img id="logo" src="sblogo.jpeg">
+            <h2>Sharanbasva University</h2>
+        </div>
+        <div class="in">
+              <input  type="checkbox" id="sidebar-active">
+              <label for="sidebar-active"class="open"> <!--Menu icon-->
+              <i class="ri-menu-line"></i>
+              </label>
+
+              <label id="overlay" for="sidebar-active"></label>
+           <div class="links-container">
+              <label for="sidebar-active" class="close">
+               <i class="ri-xrp-line"></i><!--Menu close icon-->
+               </label>
+               <a href="home.html">Home</a>
+               <a href="course.html">Courses</a>
+               <a href="about.html">About Us</a>
+               <a href="contact.html">Contact</a>
+           
+          </div>
+      </div>
+    </nav>
+    <!-- Body of the page-->
+   <div class="content">
+    <div class="heading">
+       <h2>Welcome to Sharnbasva University</h2>
+       <h3>BCA CO-ED</h3>
+    </div>
+   </div>
+   
+   
+   <div class="bgimg">
+       <img  id="bg"src="studyb.jpeg">
+
+    <!--Resources container-->
+    <div class="container">
+        <h1>Student Semester Resources</h1>
+        <label for="semester">Choose Semester:</label>
+        <select id="semester">
+            <option value="" disabled selected>Select your semester</option>
+            <option value="sem1">Semester 1</option>
+            <option value="sem2">Semester 2</option>
+            <option value="sem3">Semester 3</option>
+            <option value="sem4">Semester 4</option>
+            <option value="sem5">Semester 5</option>
+            <option value="sem6">Semester 6</option>
+            
+        </select>
+        <button onclick="loadResources()">Get Resources</button>
+
+        <div id="resources" class="resources">
+        <!--Resources links will be displayed here -->
+        </div>
+    </div>
+    </div>
+
+    <!--JS code for displaying the semester resources according to the selected sem by student-->
+    <script>
+        function loadResources() {
+            const semester = document.getElementById('semester').value;
+            const resourcesDiv = document.getElementById('resources');
+
+            if (!semester) {
+                resourcesDiv.innerHTML = '<p>Please select a semester to view resources.</p>';
+                return;
+            }
+
+            // Mock data for links to notes, syllabus, and PYQ pages
+            const data = {
+                sem1: {
+                    notes: 'download.html',
+                    
+                    
+                },
+                sem2: {
+                    notes: 'download.html',
+                     
+                    
+                },
+                // Add data for other semesters as needed
+            };
+
+            const semesterData = data[semester];
+
+            if (semesterData) {
+                resourcesDiv.innerHTML = `
+                    <h2>Resources for ${semester.replace('sem', 'Semester ')}</h2>
+                    <a href="${semesterData.notes}" target="_blank">Click here to access</a>
+                   
+                    
+                `;
+            } else {
+                resourcesDiv.innerHTML = '<p>No resources found for the selected semester.</p>';
+            }
+        }
+    </script>
+</body>
+</html>

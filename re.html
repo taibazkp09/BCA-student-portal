@@ -1,0 +1,194 @@
+
+
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="regs.css">
+    
+   <link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+  <header>
+    <img id="logo" src="sblogo.jpeg"><h1 id="j"> Welcome to Sharanbasva University</h1>
+  </header>
+   
+    <p id="bca">BCA CO-ED</p>
+    <div class="head">
+    <div class="box">
+       
+        
+        <form action="regs.php" method="POST">
+            <h2 id="sign">Sign Up</h2>
+            <input type="hidden" name="access_key" value="b1b6a83b-4f61-4871-b7f6-bd3f8b93ccc0">
+             <input class= "input" id="text"type="text" name="fname" placeholder="Enter Fullname" >
+        <i class="fa-solid fa-user"></i>
+         <br>
+         <input class= "input" id="text"type="text" name="email" placeholder="Enter e-mail" >
+         <i class="fa-solid fa-envelope"></i>
+         
+          <br>
+          <input class= "input" id="text"type="text" name="usn" placeholder="Enter USN" >
+          <i class="fa-solid fa-user"></i>
+           <br>
+        <input class= "input" id="pass" name="password" type="password" placeholder="Enter password">
+        
+        <i  class="fa-solid fa-lock"></i>
+        <br>
+   
+        <input  class="rem"type="checkbox">I accept all terms and conditions 
+        <br>
+        <button id="btn" name="register"type="submit">SignUp</a></button>
+        <br>
+        <p id="new">Already have an account ? </p><a href="log.html">Sign in</a>
+
+
+
+        
+            
+
+        </form>
+    
+    </div>
+</div>
+<div class="footer">
+    <p>Made with <i id="f"class="fa-solid fa-heart"></i> by Taibaz Khanam</p>
+</div>
+
+    
+</body>
+</html>
+-->
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="regs.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        /* Tooltip styling */
+        .tooltip {
+            display: none;
+            border: 1px solid #ccc;
+            padding: 10px;
+            background-color: #f9f9f9;
+            color: #333;
+            font-size: 14px;
+            position: absolute;
+            width: 300px;
+            border-radius: 5px;
+            box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        .tooltip.active {
+            display: block;
+        }
+        .password-validation {
+            margin-top: 5px;
+            font-size: 14px;
+            color: red;
+        }
+        #validationMessage {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+  <header>
+    <img id="logo" src="sblogo.jpeg">
+    <h1 id="j">Welcome to Sharanbasva University</h1>
+  </header>
+   
+  <p id="bca">BCA CO-ED</p>
+  <div class="head">
+    <div class="box">
+        <form action="regs.php" method="POST">
+            <h2 id="sign">Sign Up</h2>
+            <input type="hidden" name="access_key" value="b1b6a83b-4f61-4871-b7f6-bd3f8b93ccc0">
+            
+            <input class="input" id="text" type="text" name="fname" placeholder="Enter Fullname">
+            <i class="fa-solid fa-user"></i>
+            <br>
+            
+            <input class="input" id="text" type="text" name="email" placeholder="Enter e-mail">
+            <i class="fa-solid fa-envelope"></i>
+            <br>
+            
+            <input class="input" id="text" type="text" name="usn" placeholder="Enter USN">
+            <i class="fa-solid fa-user"></i>
+            <br>
+            
+            <div style="position: relative;">
+                <input class="input" id="pass" name="password" type="password" placeholder="Enter password">
+                <i class="fa-solid fa-lock"></i>
+                <div id="tooltip" class="tooltip">
+                    Your password must include:
+                    <ul>
+                        <li>At least 8 characters</li>
+                        <li>At least one uppercase letter</li>
+                        <li>At least one lowercase letter</li>
+                        <li>At least one number</li>
+                        <li>At least one special character (@$!%*?&)</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="validationMessage" class="password-validation"></div>
+            <br>
+            
+            <input class="rem" type="checkbox">I accept all terms and conditions 
+            <br>
+            <button id="btn" name="register" type="submit">SignUp</button>
+            <br>
+            <p id="new">Already have an account?</p>
+            <a href="log.html">Sign in</a>
+        </form>
+    </div>
+  </div>
+  <div class="footer">
+      <p>Made with <i id="f" class="fa-solid fa-heart"></i> by Taibaz Khanam</p>
+  </div>
+
+  <script>
+    const passwordInput = document.getElementById("pass");
+    const tooltip = document.getElementById("tooltip");
+    const validationMessage = document.getElementById("validationMessage");
+
+    const strongPasswordRegex = /^(?=.[A-Z])(?=.[a-z])(?=.\d)(?=.[@$!%?&])[A-Za-z\d@$!%?&]{8,}$/;
+
+    // Show tooltip when the password field is focused
+    passwordInput.addEventListener("focus", () => {
+        tooltip.classList.add("active");
+    });
+
+    // Hide tooltip when the password field is blurred
+    passwordInput.addEventListener("blur", () => {
+        tooltip.classList.remove("active");
+    });
+
+    // Validate the password as the user types
+    passwordInput.addEventListener("input", () => {
+        const password = passwordInput.value;
+
+        if (strongPasswordRegex.test(password)) {
+            validationMessage.textContent = "Your password is strong!";
+            validationMessage.style.color = "green";
+        } else {
+            validationMessage.textContent = "Password is not strong enough.";
+            validationMessage.style.color = "red";
+        }
+    });
+  </script>
+</body>
+</html>

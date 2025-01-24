@@ -1,0 +1,260 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+/*Navbar section*/
+nav{
+    height: 40px;
+    background-color: #06389d;
+    display: flex;
+    gap:4vh;
+   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serifl;
+   justify-content: space-between;
+   align-items: center;
+   flex-direction: row;
+   color: white;
+}
+nav a{
+    color: white;
+    height: 100%;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1.6vw;
+}
+h2{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.bar{
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    align-items: center;
+    width: 40%;
+    padding-left: 0px;
+}
+#logo{
+    height:40px;
+    width:40px;
+    border-radius: 50%;
+    padding-left: 0px;
+}
+
+
+.links-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right:0px;
+}
+
+#sidebar-active{
+    display: none;
+}
+.open, .close{
+    display: none;
+  
+}
+.heading
+{
+    text-align: center;
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+.bgimg{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+}
+#bg{
+    height: 100%;
+    width: 30%;
+}
+/* Container styling with hover effects */
+.container
+ {
+    max-width: 700px;
+    margin: 50px auto;
+    background: #ffffff;
+    border-radius: 35px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+
+    padding: 20px;  
+    margin-right: 80px;
+    transform: scale(1);
+    transition: transform 0.5s, box-shadow 0.5s;
+
+}
+
+.container:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Header styling */
+h1 {
+    text-align: center;
+    color: #4a90e2;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Input elements */
+label, select, button {
+    display: block;
+    width: 100%;
+    margin: 15px 0;
+    font-size: 18px;
+}
+
+select {
+    padding: 10px;
+    border: 2px solid #06389d; 
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+select:focus {
+    border-color:#06389d;
+}
+
+button {
+    padding: 12px 20px;
+    background: #4a90e2;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #3b78c6;
+    transform: translateY(-2px);
+}
+
+/* Resources section */
+.resources {
+    margin-top: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.resources a {
+    display: inline-block;
+    padding: 12px 20px;
+    margin-top: 5px;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #06389d, #06389d);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.resources a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/*Responsive code for other devices*/
+@media (max-width:900px){
+ .bgimg
+ {
+    display: flex;
+    flex-direction: column-reverse;
+ }
+.container
+{
+ margin: 10px;
+}
+#bg
+{
+display: none;
+}
+nav
+{
+    height: 40px;
+}
+.bar
+{
+width: 80%;
+font-size: 10px;
+}
+
+.links-container
+{
+    flex-direction: column;
+    align-items: flex-start;
+    position: fixed;
+    top:0;
+    right: -100%;
+    z-index:10;
+    width: 300px;
+    height: 500px;
+    background-color: #06389d;
+    box-shadow: -5px 0 5px rgba(0,0,0,0.25);
+    transition: 0.75s ease-out;
+
+}
+h2{
+    font-size: 15px;
+}
+i{
+    color: white;
+}
+nav a{
+    box-sizing: border-box;
+    height: 40px;
+    width:100%;
+    padding:20px 30px;
+    justify-content: flex-start;
+    color: white;
+    font-size: 2.2vh;
+  
+}
+nav a:hover{
+    background-color: black;
+}
+
+.close{
+    display: block;
+    padding:  20px;
+  
+}
+.open{
+    display: block;
+    padding:  20px;
+}
+#sidebar-active:checked~ .links-container{
+ right: 0;
+}
+#sidebar-active:checked ~ overlay{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top:0;
+    left: 0;
+    z-index: 9;
+}
+}
